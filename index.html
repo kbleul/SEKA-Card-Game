@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="index.js"></script>
+
+    <title>Seka.com</title>
+</head>
+<body>
+
+    <article id="start_screen">
+            <button id="play_btn">Play</button>
+            <button id="guide_btn">Guide</button>
+    
+    
+    </article>
+    <section id="guide_sec">
+        <button id="back_btn">←</button>
+        <h1 id="nameGame">Seka</h1 ><hr>
+            <section id="intro">
+                <p>Seka is a very simple card game that anyone can enjoy.</p>
+                <p>The rules are very easy to follow</p>
+        
+                <p class="title_p">Basic rules</p>
+             
+              <div class="discripltion">
+                <p>-The throw area is the gray area found at the center of the game. This is where both players throw the cards that they don't need. You have to throw a card if it's your turn inorder to continue.</p>
+              </div>
+        
+              <p>The step by step sequence of the game goes like this: </p>
+              <div class="discripltion">
+                <p>-player one(you) get 11 cards initially, and player two gets 10. This is because you start the game by dropping 1 card by dragging the card to the throw Zone, making the number of cards even for both players.</p>
+                <p>-After player one(you) throw a card player two will either take the card you threw or decide he does not need it,and get a card from the deck then throw a card to the throw zone.</p>
+                <p>*The Deck is the pile of cards found between player one and player two , or the card found right before the throw zone. You can click on it to get a card from it , if it's your turn.</p>
+                <p>-After play two throws a card player one also must decide to either take the card from the throw zone ( the card thrown by player two) or take a card from the deck</p>
+                  <p><em>click on deck or the card in the throw zone to take the card</em></p>
+                <p>-Then player one throws a card and the cycle continues untile the game is over.</p>
+                
+              </div><hr>
+              <p>How to win </p>
+        
+              <div class="discripltion">
+        
+               <p>The aim of the game is simple</p>
+            <p>There are 3 boxes each player must fill in order to win</p>
+            <p>Since each player has 10 cards each , the first and second box will contain 3 cards each and the third one  4. </p>
+            <p>Inorder to win each box must be filled with a tries or a sequence tries</p>
+        
+              <ul>
+                <dl><strong>Tries : </strong></dl>
+                <dd>This is a three or four cards that have the same value. Eg  1 1 1 , J J J ...
+                    The suit of the card does not matter.
+                </dd>
+                <dl><strong>sequential Tries :</strong> </dl>
+                <dd>Here the box must containe 3 or four sequential cards with the same suit.<br>
+                    Eg. 4 5 6  ace 2 3  J Q K ...
+                       <em>They have to be the same suit</em>
+                </dd>
+              </ul>
+                
+              <P>To check if your cards are tries or sequential tries you can drag three card from your box to the finish zone found to the right or below the the box where your cards are found. If they are acceptable tries/sequential tries, the border of the box will turn to white and the cards will be appended to a proper box.</P>
+              <p>To add a fourth card simply drag the card over the area/box you want to be appended to. Remember it has to be tries/sequential tries inorder to work.</p>
+              <p><i>Note : If you already have a box filled with four cards, you can't add another box that contains four cards.</i></p>
+        
+              <p>The jocker can be used in place of any card inorder to complete a tries/sequential tries.</p>
+        
+                <p> Eg  2 jocker 2 ,  jocker 5 5 , 9 9 jocker<br>
+                        3 4 jocker , 6 jocker 8 , J Q joker
+                </p>
+        
+                </div>
+        
+                <p class ="enjoy">Enjoy</p>
+            </section>
+
+    </section>
+    <article id="play_screen">
+        <article id="main_wrapper">
+            <article id="playerOne_wrapper">
+                <section id="playerOne_cards_holder" class="playerOne"  >
+                    <div id="playerOne_top" class="container">
+        
+                    </div>
+                    <div id="playerOne_bottom" class="container">
+        
+                    </div>
+                </section>
+                <section id="playerOne_top_finishZone" class="playerOne_finishZone">
+                        <div class="finishZone_threeCardHolder container" id="firstFinishZone" onmouseout="checkTries();" ></div>
+                        <div class="finishZone_threeCardHolder container" id="secondFinishZone"></div>
+                </section>
+        
+            </article>
+        
+            <section id="mid_section" >
+                    <div id="deck" onmouseover="setDeckOnOff();" ></div>
+                    <div id="throwZone" ></div>
+                    <div id="mid_finishzone">
+                        <div id="finishZone_four" class="container" ></div>
+        
+                        <div id="finishZone_six" ></div>
+                    </div>
+            </section>
+            <section id="bottom_section" class="flex">
+                <section id="playerTwo_wrapper" class="playerTwo"></section>
+                <div id="bottom_box_container">
+                    <div class="finishZone_threeCardHolder bottom_box " id="box_bottom_one" ></div>
+                    <div class="finishZone_threeCardHolder bottom_box" id="box_bottom_two"></div>
+                </div>
+            </section>
+        </article>
+    </article>
+    <article id="end_screen">
+        <p></p>
+    </article>
+
+  
+
+</body>
+<script>
+
+    document.getElementById("guide_btn").addEventListener("click",() => {
+        $("#start_screen").hide(300);
+            $("#guide_sec").show(500);
+            $("body").css("background-color","rgb(245, 245, 209)")
+    });
+    document.getElementById("back_btn").addEventListener("click",() => {
+        $("#start_screen").show(300 , ()=>{
+            $("body").css("background-color","rgb(3, 77, 3)")
+
+        });
+            $("#guide_sec").hide(500);
+    });
+
+
+    document.getElementById("play_btn").addEventListener("click",getplayerOne_name)
+      console.clear();
+
+    //  getplayerOne_name();
+      start_game();
+</script>
+<script src="gameFunction.js"></script>
+    <script>
+        draggablesAddEvent();
+        throwZone_AddEvent();
+        containersAddEvent();
+    </script>
+<script src="DragDropTouch.js"></script>
+
+</html>

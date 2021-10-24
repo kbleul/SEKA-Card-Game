@@ -1,0 +1,380 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 77, 3);
+}
+
+#start_screen {
+    background-color: black;
+    background-image: url("IMAGES/background.jpg");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        }
+        #back_btn {
+            float: right;
+            background-color: rgb(223, 223, 193);
+            padding: .5rem 1.8rem;
+            border: none;
+            margin-right: 2%;
+            font-size: 1.2rem;
+        }
+
+        #nameGame { font-size: 3rem; margin-left: 1%;}
+    #start_screen button {
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 800;
+        width: 30%;
+        padding: .5rem 1.2rem;
+        border: none;
+    }
+    #start_screen button:nth-child(1) {
+            margin-bottom: 10%;
+    }
+    #start_screen button:hover,
+    #start_screen button:focus,
+    #back_btn:hover,
+    #back_btn:focus
+     {
+            opacity: .8;
+    }
+
+  #guide_sec { display: none; }
+  #guide_sec div,
+  #guide_sec p,
+  #guide_sec section
+  { 
+      padding-left: .2rem;
+      padding-right: .2rem;
+}
+  #nameGame {
+    font-family: cursive;
+}
+
+.enjoy {
+  font-family: cursive;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+.title_p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: brown;
+}
+
+.discripltion p {
+  font-size: .9rem;
+}
+
+.discripltion ul { font-size: .8rem; }
+#play_screen,
+#end_screen { display: none; }
+
+div,section,article { padding: 0; margin: 0; }
+
+
+img { 
+    width: 5.5rem; 
+    height: 7.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+img:hover,
+img:focus { border: 1px solid red; }
+
+#playerOne_wrapper div,
+#playerOne_wrapper img,
+#finishZone_four div,
+#finishZone_four img,
+#finishZone_six div,
+#finishZone_four img { margin-left: 0.2rem;}
+#main_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#playerOne_wrapper {
+display:flex;
+margin-top: .5%;
+
+}
+
+
+#playerOne_cards_holder { min-width: 50%;  }
+#playerOne_top,
+#playerOne_bottom,
+#finishZone_four,
+#finishZone_six {
+    display: flex;
+}
+#playerOne_bottom { 
+    border-top: 1px solid yellow; 
+    border-bottom: 1px solid yellow; 
+
+}
+
+#playerOne_top_finishZone {
+    width: 30%;   
+    margin-left: 3%;
+}
+.finishZone_threeCardHolder {
+    height: 7.9rem;
+    width: 18rem;
+    margin-left: 1rem;
+    display: flex;
+    background-color: #333;
+}
+#secondFinishZone { margin-top: 2rem; }
+ 
+#mid_section {  
+    display: flex;
+    align-items: center;  
+    padding-top: 1%;
+}
+
+#deck { width: 20%;  }
+.deckImg {  margin-top: 30%;   }
+
+.deckImg:nth-child(1){ margin-left: 5rem; }
+
+  .deckImg:not(
+  .deckImg:nth-child(1)
+  ) { display: none;}
+
+  #throwZone {
+      width: 30%;
+      height: 17rem;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+#mid_finishzone {
+    width: 50%;
+}
+
+#finishZone_four,#finishZone_six {  
+    height: 7.9rem;
+    width: 23.7rem;
+    margin-left: 8%;
+    background-color: #333;
+    display:flex;
+}
+#finishZone_six {  margin-top: 1.3rem; }
+
+#bottom_section { 
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4%;
+}
+#playerTwo_wrapper,#bottom_box_container { 
+    width: 50%;
+    align-self: flex-end;
+}
+#bottom_box_container { margin-bottom:  .5%; }
+
+#bottom_box_container { display: flex;}
+#playerTwo_wrapper img:nth-child(1) { margin-left: .5rem; }
+#playerTwo_wrapper img:not(#playerTwo_wrapper img:nth-child(1) ) {        
+    margin-left: -2rem; 
+}
+
+@media (max-width: 1200px){
+    #start_screen button {
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 800;
+        width: 60%;
+        padding: .5rem 1.2rem;
+        border: none;
+    }
+    #start_screen button:nth-child(1) {
+            margin-bottom: 10%;
+    }
+    #start_screen button:hover,
+    #start_screen button:focus,
+    #end_screen button:hover,
+    #end_screen button:focus
+     {
+            opacity: .8;
+    }
+
+    img {   
+        width: 4rem; 
+        height: 5.3rem;
+    }
+    .finishZone_threeCardHolder {
+        height: 5.3rem;
+        width: 13rem;
+    }
+
+    #playerOne_top_finishZone { margin-left: 3%;}
+   .deckImg:nth-child(1){ margin-left: 3rem; }
+   #finishZone_four,#finishZone_six {  
+    height: 5.6rem;
+    width: 17.5rem;
+    margin-left: 6%;
+   }
+   #playerTwo_wrapper img:not(#playerTwo_wrapper img:nth-child(1) ) {        
+    margin-left: -2rem; 
+}
+/*#playerOne_cards_holder { max-width: 70%;} */
+
+#mid_section, 
+#playerOne_wrapper { height: 32vh; }
+#throwZone {
+    width: 30%;
+    height: 22vh;
+    margin-top: 10%;
+   }
+#bottom_section { 
+    justify-content: initial;
+    height: 36vh; }
+#playerTwo_wrapper {
+    width: 62%;
+}
+#bottom_box_container {  
+    flex-direction: column;
+    width: 38%;
+}
+
+   #box_bottom_two,
+   #box_bottom_one{
+       margin-left: .2rem;
+   }
+   #box_bottom_one { margin-bottom: 1rem;}
+    
+
+}
+
+#end_screen { 
+    display: none; 
+    background-color: rgb(53, 53, 53); 
+    font-weight: 800; 
+    font-size: 1.8rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+ #end_screen h1 {
+     color: black;
+     font-size: 5rem;
+     font-weight: 900;
+     font-family: cursive;
+
+ }
+ #end_screen button {
+    padding: .8rem 2.5rem;
+    color: #000;
+    font-size: 1.2rem;
+    margin-top: 5%;
+    background: #ff3c00;
+    font-weight: bolder;
+    border: none;
+ }
+
+@media (max-width: 650px){
+    #start_screen button {
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 800;
+        width: 60%;
+        padding: .5rem 1.2rem;
+        border: none;
+    }
+    #start_screen button:nth-child(1) {
+            margin-bottom: 10%;
+    }
+    #start_screen button:hover,
+    #start_screen button:focus
+     {
+            opacity: .8;
+    }
+
+    img {   
+        width: 2.5rem; 
+        height: 3.3rem;
+    }
+
+    #mid_section, 
+    #playerOne_wrapper { height: 40vh; }
+    #bottom_section { 
+        height: 20vh; 
+   }
+    #playerOne_wrapper {
+        flex-direction: column;
+    }
+
+    .finishZone_threeCardHolder {
+        height: 3.5rem;
+        width: 8.2rem;
+    }
+
+    #playerOne_top_finishZone{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    #firstFinishZone,
+    #secondFinishZone{
+        margin: 2.5% 6% 0 0; 
+    }
+
+    .finishZone_threeCardHolder div,
+    .finishZone_threeCardHolder img {
+        margin-left: 0;
+    }
+    
+       #firstFinishZone div,
+       #firstFinishZone img,
+       #seconFinishZone div,
+       #secondFinishZone img,
+       #finishZone_four div,
+       #finishZone_four img,
+       #finishZone_six div,
+       #finishZone_six img { margin-left: 0.1rem;}
+
+
+    #deck { width: 10%;  }
+    
+   .deckImg:nth-child(1){ margin-left: .25rem; }
+   #throwZone {
+       width: 30%;
+       height: 17vh;
+       margin-top: 3%;
+       margin-left: 5%;
+   }
+
+   #finishZone_four,#finishZone_six {  
+    height: 3.5rem;
+    width: 11rem;
+    margin-left: 10.5%;
+   }
+
+   #playerTwo_wrapper { width: 59.6%; }
+   #playerTwo_wrapper img {
+    width: 2.85rem; 
+    height: 3.8rem;
+   }
+
+   #end_screen p{ font-size: 1.5rem;}
+    
+}
