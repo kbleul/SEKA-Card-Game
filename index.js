@@ -177,7 +177,7 @@ class gameComponents {
            "data-value":game.Deck.get(tempdecksrc[i]).value,
            "data-suit" : game.Deck.get(tempdecksrc[i]).suit
          })
-           img.src = "IMAGES/single.png";
+           img.src = "https://gdurl.com/Wnnl";
            img.id = tempdecksrc[i];
            let img_wrapper = document.getElementById("deck");
 
@@ -259,7 +259,7 @@ start_game = () => {
             
             let img_wrapper = document.getElementById("playerTwo_wrapper");
     
-            $(img).attr("draggable", "false").addClass("playerTwo_img");
+            $(img).attr("draggable", "false").addClass("playerTwo_img");g
             $(img).attr({
               "data-value":j[1].value,
               "data-suit" : j[1].suit
