@@ -8,3 +8,5 @@
     
    - http://seka-cards-game-kbleul.vercel.app
    - https://seka-card-game.netlify.app
+
+## Project still being built
